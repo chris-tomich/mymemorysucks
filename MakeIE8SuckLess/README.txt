@@ -1,0 +1,1 @@
+For info about this library, go to http://mymemorysucks.com.
