@@ -1,1 +1,1 @@
-For info about this library, go to http://mymemorysucks.com.
+For info about this library, go to https://mymemorysucks.wordpress.com/2015/04/05/making-internet-explorer-8-ie8-suck-less-for-native-javascript/.
