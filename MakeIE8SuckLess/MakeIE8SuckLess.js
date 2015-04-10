@@ -22,7 +22,7 @@
 
 var MakeIE8SuckLess = {
     // Place any code in the initialise function that will fix up globally scoped objects like "window" or "document"
-    Initialise: function() {
+    initialise: function() {
         if (document.getElementsByClassName === undefined || document.getElementsByClassName === null) {
             if (document.addEventListener === undefined || document.addEventListener === null) {
                 // Looks like it's IE8 or lower
@@ -53,11 +53,11 @@ var MakeIE8SuckLess = {
             }
         }
     },
-    ByFixingMyMouseEvent: function(event) {
-        // This will fix the missing event for IE8 but leave conforming browsers untouched
+    byFixingMyMouseEvent: function(event) {
+        // This will fix the missing event for IE8 but leaves conforming browsers untouched
         event = (event === undefined || event === null) ? window.event : event;
 
-        // This will fix missing pageX and missing pageY for IE8 but leave conforming browsers untouched
+        // This will fix the missing pageX and missing pageY for IE8 but leaves conforming browsers untouched
         if (event.pageX === undefined || event.pageX === null) {
             event.pageX = event.clientX + document.documentElement.scrollLeft;
         }
@@ -95,9 +95,14 @@ var MakeIE8SuckLess = {
             }
         }
 
+        // This will fix the missing target property for IE8 by assigning srcElement to target
+        if (event.target === undefined || event.target === null) {
+            event.target = event.srcElement;
+        }
+
         return event;
     },
-    ByFixingMyElement: function(element) {
+    byFixingMyElement: function(element) {
         // This converts the addEventListener into attachEvent for IE8
         if (element.addEventListener === undefined || element.addEventListener === null) {
             if (element.attachEvent !== undefined && element.attachEvent !== null) {
