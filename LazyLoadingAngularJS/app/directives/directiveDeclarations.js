@@ -1,5 +1,5 @@
-lazyLoadAngularJsApp.directive("dashboardGraph", function() { new dashboardGraph(); });
-lazyLoadAngularJsApp.directive("dashboardPieChart", function() { new dashboardPieChart(); });
-lazyLoadAngularJsApp.directive("dashboardTable", function() { new dashboardTable(); });
-lazyLoadAngularJsApp.directive("helpContent", function() { new helpContent(); });
-lazyLoadAngularJsApp.directive("helpMenu", function() { new helpMenu(); });
+lazyLoadAngularJsApp.directive("dashboardGraph", function() { return new dashboardGraph(); });
+lazyLoadAngularJsApp.directive("dashboardPieChart", function() { return new dashboardPieChart(); });
+lazyLoadAngularJsApp.directive("dashboardTable", function() { return new dashboardTable(); });
+lazyLoadAngularJsApp.directive("helpContent", function() { return new helpContent(); });
+lazyLoadAngularJsApp.directive("helpMenu", function() { return new helpMenu(); });

@@ -1,3 +1,3 @@
-function helpController() {
+function helpController($scope) {
 
 }

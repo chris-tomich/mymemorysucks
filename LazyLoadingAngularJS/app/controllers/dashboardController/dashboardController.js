@@ -1,3 +1,3 @@
-function dashboardController() {
+function dashboardController($scope) {
 
 }
