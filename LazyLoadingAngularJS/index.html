@@ -3,9 +3,21 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Lazy Load Angular JS</title>
+    <link href="css/main.css" type="text/css" rel="stylesheet" rev="stylesheet" />
 </head>
 <body>
     <div data-ng-controller="homeController">
+        <ul id="mainMenu">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#dashboard">Dashboard</a>
+            </li>
+            <li>
+                <a href="#help">Help</a>
+            </li>
+        </ul>
         <div data-ng-view></div>
     </div>
     <script type="text/javascript" src="js/angular.js"></script>
