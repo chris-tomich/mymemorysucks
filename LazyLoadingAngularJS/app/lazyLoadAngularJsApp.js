@@ -13,7 +13,10 @@ lazyLoadAngularJsApp.config(["$routeProvider", function($routeProvider){
                 scriptDependencies: ["$q", function($q) {
                     return $q(function(resolve, reject) {
                         var jsLibraries = [
-                            "./app/controllers/dashboardController/dashboardController"
+                            "./app/controllers/dashboardController/dashboardController",
+                            "./app/directives/dashboardGraph/dashboardGraph",
+                            "./app/directives/dashboardPieChart/dashboardPieChart",
+                            "./js/chart"
                         ];
 
                         requirejs(jsLibraries, function () {
