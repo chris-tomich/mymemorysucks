@@ -1,5 +1,46 @@
-<h1>AFL Team Statistics</h1>
-<h2>Kicks vs Handballs Averages for all Teams</h2>
-<canvas id="teamStatsGraph" data-ll-dashboardgraph data-ll-graphdata="graphData" width="500px" height="500px"></canvas>
-<h2>Kicks vs Handballs</h2>
-<canvas id="kicksVsHandballs" data-ll-dashboardpiechart data-ll-graphdata="pieData" width="200px" height="200px"></canvas>
+<div class="dashboard">
+    <h1>AFL Team Statistics</h1>
+    <div class="aflStatChart">
+        <h2>Kicks vs Handballs Averages for all Teams</h2>
+        <canvas id="teamStatsGraph" data-ll-dashboardgraph data-ll-graphdata="graphData" width="350px" height="350px"></canvas>
+    </div>
+    <div class="aflStatChart">
+        <h2>Kicks vs Handballs</h2>
+        <canvas id="kicksVsHandballs" data-ll-dashboardpiechart data-ll-graphdata="pieData" width="200px" height="200px"></canvas>
+    </div>
+    <div class="aflStatChart">
+        <h2>Average Team Stats</h2>
+        <table>
+            <thead>
+            <tr>
+                <td>Team Name</td>
+                <td>Kicks</td>
+                <td>Handballs</td>
+                <td>Disposals</td>
+                <td>Marks</td>
+                <td>Hit-outs</td>
+                <td>Frees For</td>
+                <td>Frees Against</td>
+                <td>Tackles</td>
+                <td>Goals</td>
+                <td>Behinds</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr data-ng-repeat="teamStats in teamStatsData" data-ng-class-even="'even'" data-ng-class-odd="'odd'">
+                <td>{{ teamStats.teamName }}</td>
+                <td>{{ teamStats.kicks }}</td>
+                <td>{{ teamStats.handballs }}</td>
+                <td>{{ teamStats.disposals }}</td>
+                <td>{{ teamStats.marks }}</td>
+                <td>{{ teamStats.hitOuts }}</td>
+                <td>{{ teamStats.freesFor }}</td>
+                <td>{{ teamStats.freesAgainst }}</td>
+                <td>{{ teamStats.tackles }}</td>
+                <td>{{ teamStats.goals }}</td>
+                <td>{{ teamStats.behinds }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

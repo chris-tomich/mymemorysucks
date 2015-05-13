@@ -27,15 +27,14 @@ lazyLoadAngularJsApp.config(["$routeProvider", function($routeProvider){
                 }]
             }
         })
-        .when("/help", {
-            templateUrl: "/LazyLoadingAngularJS/app/controllers/helpController/helpController.html",
-            controller: "helpController",
+        .when("/about", {
+            templateUrl: "/LazyLoadingAngularJS/app/controllers/aboutController/aboutController.html",
+            controller: "aboutController",
             resolve: {
                 scriptDependencies: ["$q", function($q) {
                     return $q(function(resolve, reject) {
                         var jsLibraries = [
-                            "./app/controllers/helpController/helpController",
-                            "./app/directives/helpContent/helpContent"
+                            "./app/controllers/aboutController/aboutController"
                         ];
 
                         requirejs(jsLibraries, function() {
