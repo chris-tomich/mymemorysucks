@@ -14,6 +14,7 @@ lazyLoadAngularJsApp.config(["$routeProvider", function($routeProvider){
                     return $q(function(resolve, reject) {
                         var jsLibraries = [
                             "./app/controllers/dashboardController/dashboardController",
+                            "./app/services/aflStatsService/aflStatsService",
                             "./app/directives/dashboardGraph/dashboardGraph",
                             "./app/directives/dashboardPieChart/dashboardPieChart",
                             "./js/chart"
