@@ -13,6 +13,3 @@ pvk2pfx.exe ^
 -spc MyMemorySucksRootCA.cer ^
 -pfx MyMemorySucksRootCA.pfx ^
 -po thisismypassphrase
-
-openssl.exe pkcs12 -in .\MyMemorySucksRootCA.pfx -out .\MyMemorySucksRootCA.pem
-openssl.exe x509 -in .\MyMemorySucksRootCA.pem -out .\MyMemorySucksRootCA.cert
