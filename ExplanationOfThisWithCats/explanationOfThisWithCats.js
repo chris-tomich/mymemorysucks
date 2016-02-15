@@ -52,12 +52,13 @@ console.log(josephine.excitedToPlayWith(yarn));
 
 var roger = new Cat("Roger");
 /**
- * Roger doesn't play with the toy correctly.
+ * Roger is sneaky and steals the ball from Amelia.
  */
-roger.triesToPlayWith = function (toy) {
-    var action = "Roger wants to play with the toy! ";
-    action = action + toy();
-    return action;
-}
-console.log(roger.triesToPlayWith(ball));
-console.log(roger.triesToPlayWith(yarn));
+roger.steals = amelia.playWithBall;
+console.log(roger.steals());
+
+/**
+ * Roger is sneaky and steals the ball from Josephine.
+ */
+roger.steals = josephine.excitedToPlayWith;
+console.log(roger.steals(yarn));
