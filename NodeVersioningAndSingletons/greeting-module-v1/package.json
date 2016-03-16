@@ -1,0 +1,11 @@
+{
+  "name": "mymemorysucks-greeting-module",
+  "version": "0.1.1",
+  "description": "This is a module to test the dangers of singletons with versioning. This particular module produces a greeting.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chris Tomich",
+  "license": "MIT"
+}

@@ -1,0 +1,15 @@
+{
+  "name": "mymemorysucks-app-same-version",
+  "version": "0.0.1",
+  "description": "This is a module to test the dangers of singletons with versioning. This particular module tests the scenario when the friend and app modules are using the same version.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chris Tomich",
+  "license": "MIT",
+  "dependencies": {
+    "mymemorysucks-friend-module": "file:../friend-module",
+    "mymemorysucks-greeting-module": "file:../greeting-module-v1"
+  }
+}
